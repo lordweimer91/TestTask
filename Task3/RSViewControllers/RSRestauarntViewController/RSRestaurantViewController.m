@@ -46,7 +46,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RSDescriptionViewController *ctrl = [self.storyboard instantiateViewControllerWithIdentifier:@"RSDescriptionViewController"];
     ctrl.restaurantModel = self.restaurantModel;
-    ctrl.restaurant = [self.restaurantModel objectAtIndex:indexPath.row];
+    ctrl.restaurant = [self.restaurantModel restaurantAtIndex:indexPath.row];
     [self.navigationController pushViewController:ctrl
                                          animated:YES];
    

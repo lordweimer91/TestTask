@@ -88,7 +88,7 @@
     RSAnnotation *annotationTapped = (RSAnnotation *)view.annotation;
     RSDescriptionViewController *ctrl = [self.storyboard instantiateViewControllerWithIdentifier:@"RSDescriptionViewController"];
     ctrl.restaurantModel = self.restaurantModel;
-    ctrl.restaurant = [self.restaurantModel objectInArrayWithName:annotationTapped.title];
+    ctrl.restaurant = [self.restaurantModel restaurantInArrayWithName:annotationTapped.title];
     
     [self.navigationController pushViewController:ctrl
                                          animated:YES];

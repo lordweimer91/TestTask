@@ -35,7 +35,7 @@ static NSString const *reviewIdAddressURL = @"?orderBy=\"restaurantId\"&equalTo=
     return self;
 }
 
--(RSRestaurant *)objectAtIndex:(NSUInteger)index
+-(RSRestaurant *)restaurantAtIndex:(NSUInteger)index
 {
     if(index < self.restaurantArray.count) {
         return self.restaurantArray[index];
@@ -55,7 +55,7 @@ static NSString const *reviewIdAddressURL = @"?orderBy=\"restaurantId\"&equalTo=
 -(void) setFavoritesRestaurant:(RSRestaurant *)rest
                   withFavorite:(BOOL)favorite
 {
-    [self setFavoritesRestaurantAtIndex:[self indexOfObject:rest]
+    [self setFavoritesRestaurantAtIndex:[self indexOfRestaurant:rest]
                            withFavorite:favorite];
 }
 
@@ -64,12 +64,12 @@ static NSString const *reviewIdAddressURL = @"?orderBy=\"restaurantId\"&equalTo=
     return [NSArray arrayWithArray:self.restaurantArray];
 }
 
--(NSUInteger) indexOfObject:(RSRestaurant *)object
+-(NSUInteger) indexOfRestaurant:(RSRestaurant *)object
 {
     return [self.restaurantArray indexOfObject:object];
 }
 
--(RSRestaurant *) objectInArrayWithName:(NSString *)name
+-(RSRestaurant *) restaurantInArrayWithName:(NSString *)name
 {
     for(RSRestaurant *restaurant in self.restaurantArray){
         if([name isEqualToString:restaurant.restaurantName]){

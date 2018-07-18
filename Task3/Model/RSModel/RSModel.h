@@ -12,8 +12,8 @@
 
 @interface RSModel : NSObject
 
--(RSRestaurant *) objectAtIndex:(NSUInteger)index;
--(RSRestaurant *) objectInArrayWithName:(NSString *)name;
+-(RSRestaurant *) restaurantAtIndex:(NSUInteger)index;
+-(RSRestaurant *) restaurantInArrayWithName:(NSString *)name;
 
 -(void) setFavoritesRestaurant:(RSRestaurant *)rest
                   withFavorite:(BOOL)favorite;
@@ -21,7 +21,7 @@
 -(void) setFavoritesRestaurantAtIndex:(NSUInteger)index
                          withFavorite:(BOOL)favorite;
 
--(NSUInteger) indexOfObject:(RSRestaurant *)object;
+-(NSUInteger) indexOfRestaurant:(RSRestaurant *)object;
 
 -(NSArray<RSRestaurant *> *) arrayWithRestaurants;
 
