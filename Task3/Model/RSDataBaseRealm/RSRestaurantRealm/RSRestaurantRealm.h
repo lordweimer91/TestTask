@@ -22,7 +22,8 @@
 @property (nonatomic, strong) RLMArray<RSStringRealm *><RSStringRealm> *restaurantImagePath;
 @property (nonatomic, assign) BOOL restaurantFavorite;
 
-+(instancetype)restaurantRealmWithRestaurant:(RSRestaurant *) restaurant;
++(instancetype) restaurantRealmWithRestaurant:(RSRestaurant *) restaurant;
+-(RSRestaurant *) getRestaurant;
 
 @end
 

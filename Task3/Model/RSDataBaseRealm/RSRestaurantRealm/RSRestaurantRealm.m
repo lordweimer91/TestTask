@@ -31,4 +31,21 @@
     rest.restaurantFavorite = restaurant.restaurantFavorite;
     return rest;
 }
+
+-(RSRestaurant *) getRestaurant
+{
+    NSMutableArray<NSURL *> *urls = [NSMutableArray new];
+    for(NSUInteger i = 0; i < self.restaurantImagePath.count; i++){
+        [urls addObject:[NSURL URLWithString:self.restaurantImagePath[i].string]];
+    }
+    return [RSRestaurant restaurantWithID:self.restaurantID
+                                     name:self.restaurantName
+                              description:self.restaurantDescription
+                                   rating:self.restaurantRating
+                                 latitude:self.restaurantLatitude
+                                longitude:self.restaurantLongitude
+                                  address:self.restaurantAddress
+                                 favorite:self.restaurantFavorite
+                               imagePaths:urls];
+}
 @end
