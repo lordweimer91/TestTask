@@ -27,4 +27,13 @@
     restReview.key = [NSString stringWithString:review.key];
     return restReview;
 }
+
+-(RSReview *) getReview
+{
+    return [RSReview reviewWithKey:self.key
+                            author:self.author
+                                id:self.restaurantID
+                              text:self.text
+                        dateString:self.dateString];
+}
 @end

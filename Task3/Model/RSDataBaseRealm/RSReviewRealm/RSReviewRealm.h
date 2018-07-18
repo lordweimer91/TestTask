@@ -16,7 +16,8 @@
 @property (nonatomic, strong) NSString *dateString;
 @property (nonatomic, strong) NSString *text;
 
-+(instancetype)reviewRealmWithReview:(RSReview *)review;
++(instancetype) reviewRealmWithReview:(RSReview *)review;
+-(RSReview *) getReview;
 
 @end
 RLM_ARRAY_TYPE(RSReviewRealm) // define RLMArray<RSReviewRealm>
