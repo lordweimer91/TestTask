@@ -13,7 +13,7 @@
 
 @implementation RSDataBaseRealm
 
-+(void)addRestaurantArrayRealmObject:(RSRestaurant *)object //proverka git
++(void)addRestaurantArrayRealmObject:(RSRestaurant *)object
 {
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
